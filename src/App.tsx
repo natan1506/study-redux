@@ -1,15 +1,14 @@
-import React from 'react'
-import { Provider } from 'react-redux'
+import { Provider as ReduxProvider } from 'react-redux'
+import './styles/global.css'
+import { store } from './store'
+import { Player } from './pages/Player'
 
-import store from './store'
-
-import Catalog from './components/Catalog'
 
 function App() {
   return (
-    <Provider store={store}>
-      <Catalog />
-    </Provider>
+    <ReduxProvider store={store}>
+      <Player />
+    </ReduxProvider>
   )
 }
 
